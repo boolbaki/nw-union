@@ -1,0 +1,23 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+schema:
+- name: hidel-wiki
+  path: .
+  commands:
+    fmt:
+      status: true
+    run:
+      status: true
+  watcher:
+    extensions:
+    - go
+    - html
+    - yml
+    paths:
+    - /
+    ignored_paths:
+    - .git
+    - .realize
+    - .docker

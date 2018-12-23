@@ -1,6 +1,21 @@
 version: "3"
 
 services:
+  # アプリケーション
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/go/src/github.com/nw-union/hidel-wiki:cached
+      # --- exclude volums ---
+      - /go/src/github.com/nw-union/hidel-wiki/.docker/
+    ports:
+      - 8080:8080
+    depends_on:
+      - es
+
+  # ElasticSearch (データベース)
   es:
     build: .docker/es
     environment:
