@@ -10,8 +10,7 @@
 ## Setup in local
 
 ```
-yarn init -y
-yarn add graphql-yoga prisma
+yarn
 node src/index.js
 ```
 
