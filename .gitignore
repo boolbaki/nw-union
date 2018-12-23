@@ -1,3 +1,4 @@
 .DS_Store
 .docker/es/data/*
 !.docker/es/data/.gitkeep
+node_modules/
